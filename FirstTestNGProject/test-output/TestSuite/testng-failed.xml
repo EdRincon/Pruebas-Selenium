@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]" parallel="tests">
+  <parameter name="browser" value="Test"/>
+  <test name="ChromeTest">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="firsttestngpackage.XBrowser"/>
+    </classes>
+  </test> <!-- ChromeTest -->
+  <test name="FirefoxTest">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="firsttestngpackage.XBrowser"/>
+    </classes>
+  </test> <!-- FirefoxTest -->
+  <test name="IETest">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="firsttestngpackage.XBrowser"/>
+    </classes>
+  </test> <!-- IETest -->
+  <test name="SafariTest">
+    <parameter name="browser" value="Test"/>
+    <classes>
+      <class name="firsttestngpackage.XBrowser"/>
+    </classes>
+  </test> <!-- SafariTest -->
+  <test name="SafariTest(failed)" parallel="tests">
+    <parameter name="browser" value="Test"/>
+    <classes>
+      <class name="firsttestngpackage.XBrowser">
+        <methods>
+          <include name="XBrowserTest"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- firsttestngpackage.XBrowser -->
+    </classes>
+  </test> <!-- SafariTest(failed) -->
+  <test name="IETest(failed)" parallel="tests">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="firsttestngpackage.XBrowser">
+        <methods>
+          <include name="XBrowserTest"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- firsttestngpackage.XBrowser -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
